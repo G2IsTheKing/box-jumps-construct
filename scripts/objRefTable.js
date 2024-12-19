@@ -9,13 +9,16 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Particles,
 		C3.Plugins.Text,
 		C3.Plugins.TiledBg,
+		C3.Plugins.Audio,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Text.Acts.SetText,
 		C3.Plugins.System.Acts.ResetEventVar,
 		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.Sprite.Cnds.IsOutsideLayout
+		C3.Plugins.Sprite.Cnds.IsOutsideLayout,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Audio.Acts.Play
 	];
 };
 self.C3_JsPropNameTable = [
@@ -36,6 +39,7 @@ self.C3_JsPropNameTable = [
 	{TiledBackground: 0},
 	{barrier: 0},
 	{Sprite6: 0},
+	{AUDIO: 0},
 	{score: 0}
 ];
 
@@ -52,5 +56,6 @@ self.InstanceType = {
 	block: class extends self.ISpriteInstance {},
 	TiledBackground: class extends self.ITiledBackgroundInstance {},
 	barrier: class extends self.ISpriteInstance {},
-	Sprite6: class extends self.ISpriteInstance {}
+	Sprite6: class extends self.ISpriteInstance {},
+	AUDIO: class extends self.IInstance {}
 }
